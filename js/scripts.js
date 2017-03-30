@@ -1,4 +1,5 @@
 //back-end
+var outputFinal = [];
 var numeral = function(numeralInput) {
 if (numeralInput < 1 || numeralInput > 3999) {
     alert("no!");
@@ -8,7 +9,7 @@ if (numeralInput < 1 || numeralInput > 3999) {
     var inputArray = numeralInput.split("");
     var romanArray = ['I', 'V', 'X', 'L', 'C', 'D', 'M'];
     var output = [];
-    var outputFinal = [];
+    // var outputFinal = [];
     console.log(inputArray);
     for (var index = inputArray.length-1; index >= 0; index--) {
       var indexRoman = ((inputArray.length-(index+1))*2);
@@ -58,7 +59,9 @@ $(document).ready(function() {
     //   }
 
     var result = numeral(numeralInput);
-    $("#result").text();
+    $("#result").text(outputFinal);
+    $("#result").show();
+    // console.log(outputFinal);
     // $("#noresult").text(result);
   });
 });
