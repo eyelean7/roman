@@ -7,9 +7,11 @@ if (numeralInput < 1 || numeralInput > 3999) {
     console.log(typeof numeralInput);
     var inputArray = numeralInput.split("");
     console.log(inputArray);
-    for (var index = 0; index < inputArray.length; index++) {
-      console.log(inputArray[inputArray.length-(1 * (index + 1))]);
+    for (var index = inputArray.length-1; index >= 0; index--) {
+      console.log(inputArray[index]);
     }
+
+
 
 
   }
