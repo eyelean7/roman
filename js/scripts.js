@@ -4,13 +4,9 @@ var numeral = function(numeralInput) {
 if (numeralInput < 1 || numeralInput > 3999) {
     alert("no!");
    } else {
-    // alert("Cool!")
-    console.log(typeof numeralInput);
     var inputArray = numeralInput.split("");
     var romanArray = ['I', 'V', 'X', 'L', 'C', 'D', 'M'];
     var output = [];
-    // var outputFinal = [];
-    console.log(inputArray);
     for (var index = inputArray.length-1; index >= 0; index--) {
       var indexRoman = ((inputArray.length-(index+1))*2);
       var digit = parseInt(inputArray[index]);
@@ -22,7 +18,7 @@ if (numeralInput < 1 || numeralInput > 3999) {
         } //digit for loop
       } //0-3 branch
       else if (digit === 4) {
-        output.unshift(romanArray[indexRoman], romanArray[indexRoman + 1]);
+        output.shift(romanArray[indexRoman], romanArray[indexRoman + 1]);
         outputFinal = output.join("");
         console.log(outputFinal);
       }
